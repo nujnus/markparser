@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+
+from fire.core import Fire
+import sys
+from mark_parser import mark_parser
+
+class MarkParser(object):
+  """..."""
+  def add(self, path):
+    #print("test mp add", path)
+    mark_parser.add(path)
+
+  def getall(self):
+    #print("test mp update all")
+    mark_parser.getall()
+
+  def updateall(self, project_id):
+    #print("test mp update all")
+    mark_parser.updateall(project_id)
+
+  def update(self, target_file):
+    #print("test mp update", target_file)
+    mark_parser.update(target_file)
+
+  def search(self, id):
+    #print("test mp search", id)
+    mark_parser.search(id)
+
+
+if __name__ == '__main__':
+  Fire(MarkParser)
+
